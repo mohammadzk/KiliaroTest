@@ -7,18 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51610FDBE420E0F3D4C6AED7 /* Pods_KiliaroTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94F14CF4A402261D7D74350 /* Pods_KiliaroTest.framework */; };
 		7EC5D232294371ED0079F1FF /* KiliaroTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */; };
 		7EC5D234294371ED0079F1FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D233294371ED0079F1FF /* ContentView.swift */; };
 		7EC5D236294371F10079F1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D235294371F10079F1FF /* Assets.xcassets */; };
 		7EC5D239294371F10079F1FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D238294371F10079F1FF /* Preview Assets.xcassets */; };
+		7EC5D241294378630079F1FF /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D240294378630079F1FF /* PhotoModel.swift */; };
+		7EC5D2502943B0540079F1FF /* PhotoResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D24F2943B0540079F1FF /* PhotoResponseTest.swift */; };
+		7EC5D2522943B57C0079F1FF /* JsonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D2512943B57C0079F1FF /* JsonBuilder.swift */; };
+		7EC5D2552943C51D0079F1FF /* List.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D2542943C51D0079F1FF /* List.json */; };
+		7EC5D25929449C720079F1FF /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D25829449C720079F1FF /* RequestBuilder.swift */; };
+		7EEC47322944E50C000E3A7B /* RequestBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47312944E50C000E3A7B /* RequestBuilderTest.swift */; };
+		7EEC47352944F510000E3A7B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47342944F510000E3A7B /* Service.swift */; };
+		7EEC473829453661000E3A7B /* ObjectValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC473729453661000E3A7B /* ObjectValidator.swift */; };
+		7EEC473C29454719000E3A7B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC473B29454719000E3A7B /* Result.swift */; };
+		7EEC4740294549A1000E3A7B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC473F294549A1000E3A7B /* MockURLProtocol.swift */; };
+		7EEC47462946205F000E3A7B /* AlamoFireRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47452946205F000E3A7B /* AlamoFireRequestTest.swift */; };
+		7EEC474B29463DDB000E3A7B /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC474A29463DDB000E3A7B /* HomeService.swift */; };
+		889A3E8A16534A83B1F89C1A /* Pods_KiliaroTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7053C8CC1D908A7AB043853C /* Pods_KiliaroTestTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7EC5D24A2943AFC10079F1FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC5D226294371ED0079F1FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EC5D22D294371ED0079F1FF;
+			remoteInfo = KiliaroTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		15C048EB9075BFF1D5D4ABEC /* Pods-KiliaroTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTestTests.debug.xcconfig"; path = "Target Support Files/Pods-KiliaroTestTests/Pods-KiliaroTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7053C8CC1D908A7AB043853C /* Pods_KiliaroTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiliaroTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC5D22E294371ED0079F1FF /* KiliaroTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiliaroTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroTestApp.swift; sourceTree = "<group>"; };
 		7EC5D233294371ED0079F1FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7EC5D235294371F10079F1FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC5D238294371F10079F1FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7EC5D240294378630079F1FF /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		7EC5D2462943AFC10079F1FF /* KiliaroTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiliaroTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC5D24F2943B0540079F1FF /* PhotoResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponseTest.swift; sourceTree = "<group>"; };
+		7EC5D2512943B57C0079F1FF /* JsonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonBuilder.swift; sourceTree = "<group>"; };
+		7EC5D2542943C51D0079F1FF /* List.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = List.json; sourceTree = "<group>"; };
+		7EC5D25829449C720079F1FF /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		7EEC47312944E50C000E3A7B /* RequestBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTest.swift; sourceTree = "<group>"; };
+		7EEC47342944F510000E3A7B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7EEC473729453661000E3A7B /* ObjectValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectValidator.swift; sourceTree = "<group>"; };
+		7EEC473B29454719000E3A7B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7EEC473F294549A1000E3A7B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		7EEC47452946205F000E3A7B /* AlamoFireRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireRequestTest.swift; sourceTree = "<group>"; };
+		7EEC474A29463DDB000E3A7B /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		D729A30BF7185DDA4605D9A0 /* Pods-KiliaroTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTestTests.release.xcconfig"; path = "Target Support Files/Pods-KiliaroTestTests/Pods-KiliaroTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		E5A4D68126EE8DAEBA2AA470 /* Pods-KiliaroTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTest.release.xcconfig"; path = "Target Support Files/Pods-KiliaroTest/Pods-KiliaroTest.release.xcconfig"; sourceTree = "<group>"; };
+		E94F14CF4A402261D7D74350 /* Pods_KiliaroTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiliaroTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB37FF2F8EFDF7E1DEFBBC1B /* Pods-KiliaroTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTest.debug.xcconfig"; path = "Target Support Files/Pods-KiliaroTest/Pods-KiliaroTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51610FDBE420E0F3D4C6AED7 /* Pods_KiliaroTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC5D2432943AFC10079F1FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889A3E8A16534A83B1F89C1A /* Pods_KiliaroTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46BCD66B0593875B19A5E839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E94F14CF4A402261D7D74350 /* Pods_KiliaroTest.framework */,
+				7053C8CC1D908A7AB043853C /* Pods_KiliaroTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EC5D225294371ED0079F1FF = {
 			isa = PBXGroup;
 			children = (
 				7EC5D230294371ED0079F1FF /* KiliaroTest */,
+				7EC5D2472943AFC10079F1FF /* KiliaroTestTests */,
 				7EC5D22F294371ED0079F1FF /* Products */,
+				9DC953D6B54440E7E796990E /* Pods */,
+				46BCD66B0593875B19A5E839 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -44,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7EC5D22E294371ED0079F1FF /* KiliaroTest.app */,
+				7EC5D2462943AFC10079F1FF /* KiliaroTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +116,8 @@
 		7EC5D230294371ED0079F1FF /* KiliaroTest */ = {
 			isa = PBXGroup;
 			children = (
+				7EC5D25629449C1A0079F1FF /* Network */,
+				7EC5D23F294378490079F1FF /* Models */,
 				7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */,
 				7EC5D233294371ED0079F1FF /* ContentView.swift */,
 				7EC5D235294371F10079F1FF /* Assets.xcassets */,
@@ -67,6 +134,82 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7EC5D23F294378490079F1FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D240294378630079F1FF /* PhotoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EC5D2472943AFC10079F1FF /* KiliaroTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D24F2943B0540079F1FF /* PhotoResponseTest.swift */,
+				7EC5D2512943B57C0079F1FF /* JsonBuilder.swift */,
+				7EC5D2542943C51D0079F1FF /* List.json */,
+				7EEC47312944E50C000E3A7B /* RequestBuilderTest.swift */,
+				7EEC473F294549A1000E3A7B /* MockURLProtocol.swift */,
+				7EEC47452946205F000E3A7B /* AlamoFireRequestTest.swift */,
+			);
+			path = KiliaroTestTests;
+			sourceTree = "<group>";
+		};
+		7EC5D25629449C1A0079F1FF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D25729449C4F0079F1FF /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7EC5D25729449C4F0079F1FF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC474929463DCC000E3A7B /* Services */,
+				7EEC473629453646000E3A7B /* Enums */,
+				7EEC47332944F4FD000E3A7B /* Protocols */,
+				7EC5D25829449C720079F1FF /* RequestBuilder.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7EEC47332944F4FD000E3A7B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC47342944F510000E3A7B /* Service.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7EEC473629453646000E3A7B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC473729453661000E3A7B /* ObjectValidator.swift */,
+				7EEC473B29454719000E3A7B /* Result.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		7EEC474929463DCC000E3A7B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC474A29463DDB000E3A7B /* HomeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9DC953D6B54440E7E796990E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB37FF2F8EFDF7E1DEFBBC1B /* Pods-KiliaroTest.debug.xcconfig */,
+				E5A4D68126EE8DAEBA2AA470 /* Pods-KiliaroTest.release.xcconfig */,
+				15C048EB9075BFF1D5D4ABEC /* Pods-KiliaroTestTests.debug.xcconfig */,
+				D729A30BF7185DDA4605D9A0 /* Pods-KiliaroTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EC5D23C294371F10079F1FF /* Build configuration list for PBXNativeTarget "KiliaroTest" */;
 			buildPhases = (
+				C1486686AD8D2FFB62C11559 /* [CP] Check Pods Manifest.lock */,
 				7EC5D22A294371ED0079F1FF /* Sources */,
 				7EC5D22B294371ED0079F1FF /* Frameworks */,
 				7EC5D22C294371ED0079F1FF /* Resources */,
+				B9A56FDBB394528D17139721 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -86,6 +231,25 @@
 			productName = KiliaroTest;
 			productReference = 7EC5D22E294371ED0079F1FF /* KiliaroTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7EC5D2452943AFC10079F1FF /* KiliaroTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC5D24C2943AFC10079F1FF /* Build configuration list for PBXNativeTarget "KiliaroTestTests" */;
+			buildPhases = (
+				388441C31D23F2C0228EA999 /* [CP] Check Pods Manifest.lock */,
+				7EC5D2422943AFC10079F1FF /* Sources */,
+				7EC5D2432943AFC10079F1FF /* Frameworks */,
+				7EC5D2442943AFC10079F1FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EC5D24B2943AFC10079F1FF /* PBXTargetDependency */,
+			);
+			name = KiliaroTestTests;
+			productName = KiliaroTestTests;
+			productReference = 7EC5D2462943AFC10079F1FF /* KiliaroTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +263,11 @@
 				TargetAttributes = {
 					7EC5D22D294371ED0079F1FF = {
 						CreatedOnToolsVersion = 14.0;
+					};
+					7EC5D2452943AFC10079F1FF = {
+						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
+						TestTargetID = 7EC5D22D294371ED0079F1FF;
 					};
 				};
 			};
@@ -116,6 +285,7 @@
 			projectRoot = "";
 			targets = (
 				7EC5D22D294371ED0079F1FF /* KiliaroTest */,
+				7EC5D2452943AFC10079F1FF /* KiliaroTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,19 +300,117 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EC5D2442943AFC10079F1FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC5D2552943C51D0079F1FF /* List.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		388441C31D23F2C0228EA999 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiliaroTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9A56FDBB394528D17139721 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KiliaroTest/Pods-KiliaroTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KiliaroTest/Pods-KiliaroTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KiliaroTest/Pods-KiliaroTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1486686AD8D2FFB62C11559 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiliaroTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7EC5D22A294371ED0079F1FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC5D241294378630079F1FF /* PhotoModel.swift in Sources */,
+				7EEC473829453661000E3A7B /* ObjectValidator.swift in Sources */,
 				7EC5D234294371ED0079F1FF /* ContentView.swift in Sources */,
 				7EC5D232294371ED0079F1FF /* KiliaroTestApp.swift in Sources */,
+				7EEC473C29454719000E3A7B /* Result.swift in Sources */,
+				7EC5D25929449C720079F1FF /* RequestBuilder.swift in Sources */,
+				7EEC474B29463DDB000E3A7B /* HomeService.swift in Sources */,
+				7EEC47352944F510000E3A7B /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC5D2422943AFC10079F1FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EEC47322944E50C000E3A7B /* RequestBuilderTest.swift in Sources */,
+				7EEC4740294549A1000E3A7B /* MockURLProtocol.swift in Sources */,
+				7EEC47462946205F000E3A7B /* AlamoFireRequestTest.swift in Sources */,
+				7EC5D2502943B0540079F1FF /* PhotoResponseTest.swift in Sources */,
+				7EC5D2522943B57C0079F1FF /* JsonBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EC5D24B2943AFC10079F1FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EC5D22D294371ED0079F1FF /* KiliaroTest */;
+			targetProxy = 7EC5D24A2943AFC10079F1FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7EC5D23A294371F10079F1FF /* Debug */ = {
@@ -261,6 +529,7 @@
 		};
 		7EC5D23D294371F10079F1FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB37FF2F8EFDF7E1DEFBBC1B /* Pods-KiliaroTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +558,7 @@
 		};
 		7EC5D23E294371F10079F1FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5A4D68126EE8DAEBA2AA470 /* Pods-KiliaroTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +585,55 @@
 			};
 			name = Release;
 		};
+		7EC5D24D2943AFC10079F1FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15C048EB9075BFF1D5D4ABEC /* Pods-KiliaroTestTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assignment.KiliaroTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KiliaroTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KiliaroTest";
+			};
+			name = Debug;
+		};
+		7EC5D24E2943AFC10079F1FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D729A30BF7185DDA4605D9A0 /* Pods-KiliaroTestTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assignment.KiliaroTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KiliaroTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KiliaroTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +651,15 @@
 			buildConfigurations = (
 				7EC5D23D294371F10079F1FF /* Debug */,
 				7EC5D23E294371F10079F1FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EC5D24C2943AFC10079F1FF /* Build configuration list for PBXNativeTarget "KiliaroTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC5D24D2943AFC10079F1FF /* Debug */,
+				7EC5D24E2943AFC10079F1FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
