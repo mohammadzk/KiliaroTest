@@ -14,7 +14,7 @@ final class RequestBuilderTest: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try   super.setUpWithError()
-        sut = RequestBuilder("https://api1.kiliaro.com", path: "/shared/").addPathItems(parameters: ["djlCbGusTJamg_ca4axEVw","media"]).setMethod(method: .get)
+        sut = RequestBuilder("https://api1.kiliaro.com", path: String(format: "/shared/%@/media", "djlCbGusTJamg_ca4axEVw")).setMethod(method: .get)
     }
 
     override func tearDownWithError() throws {

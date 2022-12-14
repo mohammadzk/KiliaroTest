@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		51610FDBE420E0F3D4C6AED7 /* Pods_KiliaroTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94F14CF4A402261D7D74350 /* Pods_KiliaroTest.framework */; };
 		7EC5D232294371ED0079F1FF /* KiliaroTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */; };
-		7EC5D234294371ED0079F1FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D233294371ED0079F1FF /* ContentView.swift */; };
 		7EC5D236294371F10079F1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D235294371F10079F1FF /* Assets.xcassets */; };
 		7EC5D239294371F10079F1FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D238294371F10079F1FF /* Preview Assets.xcassets */; };
 		7EC5D241294378630079F1FF /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D240294378630079F1FF /* PhotoModel.swift */; };
@@ -24,6 +23,17 @@
 		7EEC4740294549A1000E3A7B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC473F294549A1000E3A7B /* MockURLProtocol.swift */; };
 		7EEC47462946205F000E3A7B /* AlamoFireRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47452946205F000E3A7B /* AlamoFireRequestTest.swift */; };
 		7EEC474B29463DDB000E3A7B /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC474A29463DDB000E3A7B /* HomeService.swift */; };
+		7EEC47512947A29A000E3A7B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47502947A29A000E3A7B /* HomeView.swift */; };
+		7EEC47542947C96E000E3A7B /* MainWindowEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47532947C96E000E3A7B /* MainWindowEnvironmentKey.swift */; };
+		7EEC47572947CDCE000E3A7B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47562947CDCE000E3A7B /* HomeViewModel.swift */; };
+		7EEC47592947D6B9000E3A7B /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47582947D6B9000E3A7B /* Formatters.swift */; };
+		7EEC475D2947D99C000E3A7B /* Functionalitytest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC475C2947D99C000E3A7B /* Functionalitytest.swift */; };
+		7EEC475F2947EE32000E3A7B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC475E2947EE32000E3A7B /* StringExtension.swift */; };
+		7EEC47612948A9CB000E3A7B /* NumberExtetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47602948A9CB000E3A7B /* NumberExtetion.swift */; };
+		7EEC47642948C9A8000E3A7B /* APIConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47632948C9A8000E3A7B /* APIConstans.swift */; };
+		7EEC47662948D737000E3A7B /* LoadStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47652948D737000E3A7B /* LoadStatus.swift */; };
+		7EEC47692948E1E2000E3A7B /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC47682948E1E2000E3A7B /* PhotoCell.swift */; };
+		7EEC476C2948E238000E3A7B /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC476B2948E238000E3A7B /* PhotoCellViewModel.swift */; };
 		889A3E8A16534A83B1F89C1A /* Pods_KiliaroTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7053C8CC1D908A7AB043853C /* Pods_KiliaroTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +50,9 @@
 /* Begin PBXFileReference section */
 		15C048EB9075BFF1D5D4ABEC /* Pods-KiliaroTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTestTests.debug.xcconfig"; path = "Target Support Files/Pods-KiliaroTestTests/Pods-KiliaroTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7053C8CC1D908A7AB043853C /* Pods_KiliaroTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiliaroTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E888BAC2949B80F0015FF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7EC5D22E294371ED0079F1FF /* KiliaroTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiliaroTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroTestApp.swift; sourceTree = "<group>"; };
-		7EC5D233294371ED0079F1FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7EC5D235294371F10079F1FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC5D238294371F10079F1FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7EC5D240294378630079F1FF /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
@@ -58,6 +68,17 @@
 		7EEC473F294549A1000E3A7B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		7EEC47452946205F000E3A7B /* AlamoFireRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireRequestTest.swift; sourceTree = "<group>"; };
 		7EEC474A29463DDB000E3A7B /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		7EEC47502947A29A000E3A7B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7EEC47532947C96E000E3A7B /* MainWindowEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowEnvironmentKey.swift; sourceTree = "<group>"; };
+		7EEC47562947CDCE000E3A7B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7EEC47582947D6B9000E3A7B /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		7EEC475C2947D99C000E3A7B /* Functionalitytest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functionalitytest.swift; sourceTree = "<group>"; };
+		7EEC475E2947EE32000E3A7B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7EEC47602948A9CB000E3A7B /* NumberExtetion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtetion.swift; sourceTree = "<group>"; };
+		7EEC47632948C9A8000E3A7B /* APIConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstans.swift; sourceTree = "<group>"; };
+		7EEC47652948D737000E3A7B /* LoadStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStatus.swift; sourceTree = "<group>"; };
+		7EEC47682948E1E2000E3A7B /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		7EEC476B2948E238000E3A7B /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
 		D729A30BF7185DDA4605D9A0 /* Pods-KiliaroTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTestTests.release.xcconfig"; path = "Target Support Files/Pods-KiliaroTestTests/Pods-KiliaroTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5A4D68126EE8DAEBA2AA470 /* Pods-KiliaroTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTest.release.xcconfig"; path = "Target Support Files/Pods-KiliaroTest/Pods-KiliaroTest.release.xcconfig"; sourceTree = "<group>"; };
 		E94F14CF4A402261D7D74350 /* Pods_KiliaroTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiliaroTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,10 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				7EC5D25629449C1A0079F1FF /* Network */,
-				7EC5D23F294378490079F1FF /* Models */,
+				7EEC474F2947A260000E3A7B /* Views */,
 				7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */,
-				7EC5D233294371ED0079F1FF /* ContentView.swift */,
 				7EC5D235294371F10079F1FF /* Assets.xcassets */,
+				7E888BAC2949B80F0015FF71 /* Info.plist */,
+				7EEC47522947C920000E3A7B /* Helpers */,
 				7EC5D237294371F10079F1FF /* Preview Content */,
 			);
 			path = KiliaroTest;
@@ -145,12 +167,8 @@
 		7EC5D2472943AFC10079F1FF /* KiliaroTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				7EC5D24F2943B0540079F1FF /* PhotoResponseTest.swift */,
-				7EC5D2512943B57C0079F1FF /* JsonBuilder.swift */,
-				7EC5D2542943C51D0079F1FF /* List.json */,
-				7EEC47312944E50C000E3A7B /* RequestBuilderTest.swift */,
-				7EEC473F294549A1000E3A7B /* MockURLProtocol.swift */,
-				7EEC47452946205F000E3A7B /* AlamoFireRequestTest.swift */,
+				7EEC475B2947D965000E3A7B /* ProjectFunctionTest */,
+				7EEC475A2947D934000E3A7B /* NetWorkTests */,
 			);
 			path = KiliaroTestTests;
 			sourceTree = "<group>";
@@ -158,6 +176,7 @@
 		7EC5D25629449C1A0079F1FF /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7EC5D23F294378490079F1FF /* Models */,
 				7EC5D25729449C4F0079F1FF /* API */,
 			);
 			path = Network;
@@ -170,6 +189,7 @@
 				7EEC473629453646000E3A7B /* Enums */,
 				7EEC47332944F4FD000E3A7B /* Protocols */,
 				7EC5D25829449C720079F1FF /* RequestBuilder.swift */,
+				7EEC47632948C9A8000E3A7B /* APIConstans.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -197,6 +217,74 @@
 				7EEC474A29463DDB000E3A7B /* HomeService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7EEC474F2947A260000E3A7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC47672948E1C0000E3A7B /* CellItemViews */,
+				7EEC47552947CDAD000E3A7B /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7EEC47522947C920000E3A7B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC47532947C96E000E3A7B /* MainWindowEnvironmentKey.swift */,
+				7EEC47582947D6B9000E3A7B /* Formatters.swift */,
+				7EEC475E2947EE32000E3A7B /* StringExtension.swift */,
+				7EEC47602948A9CB000E3A7B /* NumberExtetion.swift */,
+				7EEC47652948D737000E3A7B /* LoadStatus.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7EEC47552947CDAD000E3A7B /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC47502947A29A000E3A7B /* HomeView.swift */,
+				7EEC47562947CDCE000E3A7B /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		7EEC475A2947D934000E3A7B /* NetWorkTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D24F2943B0540079F1FF /* PhotoResponseTest.swift */,
+				7EC5D2512943B57C0079F1FF /* JsonBuilder.swift */,
+				7EC5D2542943C51D0079F1FF /* List.json */,
+				7EEC47312944E50C000E3A7B /* RequestBuilderTest.swift */,
+				7EEC473F294549A1000E3A7B /* MockURLProtocol.swift */,
+				7EEC47452946205F000E3A7B /* AlamoFireRequestTest.swift */,
+			);
+			path = NetWorkTests;
+			sourceTree = "<group>";
+		};
+		7EEC475B2947D965000E3A7B /* ProjectFunctionTest */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC475C2947D99C000E3A7B /* Functionalitytest.swift */,
+			);
+			path = ProjectFunctionTest;
+			sourceTree = "<group>";
+		};
+		7EEC47672948E1C0000E3A7B /* CellItemViews */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC476A2948E221000E3A7B /* PhotoCellView */,
+			);
+			path = CellItemViews;
+			sourceTree = "<group>";
+		};
+		7EEC476A2948E221000E3A7B /* PhotoCellView */ = {
+			isa = PBXGroup;
+			children = (
+				7EEC47682948E1E2000E3A7B /* PhotoCell.swift */,
+				7EEC476B2948E238000E3A7B /* PhotoCellViewModel.swift */,
+			);
+			path = PhotoCellView;
 			sourceTree = "<group>";
 		};
 		9DC953D6B54440E7E796990E /* Pods */ = {
@@ -379,13 +467,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EEC476C2948E238000E3A7B /* PhotoCellViewModel.swift in Sources */,
 				7EC5D241294378630079F1FF /* PhotoModel.swift in Sources */,
+				7EEC47542947C96E000E3A7B /* MainWindowEnvironmentKey.swift in Sources */,
+				7EEC47592947D6B9000E3A7B /* Formatters.swift in Sources */,
+				7EEC47642948C9A8000E3A7B /* APIConstans.swift in Sources */,
+				7EEC47692948E1E2000E3A7B /* PhotoCell.swift in Sources */,
 				7EEC473829453661000E3A7B /* ObjectValidator.swift in Sources */,
-				7EC5D234294371ED0079F1FF /* ContentView.swift in Sources */,
+				7EEC47572947CDCE000E3A7B /* HomeViewModel.swift in Sources */,
 				7EC5D232294371ED0079F1FF /* KiliaroTestApp.swift in Sources */,
 				7EEC473C29454719000E3A7B /* Result.swift in Sources */,
 				7EC5D25929449C720079F1FF /* RequestBuilder.swift in Sources */,
+				7EEC475F2947EE32000E3A7B /* StringExtension.swift in Sources */,
+				7EEC47512947A29A000E3A7B /* HomeView.swift in Sources */,
+				7EEC47612948A9CB000E3A7B /* NumberExtetion.swift in Sources */,
 				7EEC474B29463DDB000E3A7B /* HomeService.swift in Sources */,
+				7EEC47662948D737000E3A7B /* LoadStatus.swift in Sources */,
 				7EEC47352944F510000E3A7B /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EEC47322944E50C000E3A7B /* RequestBuilderTest.swift in Sources */,
+				7EEC475D2947D99C000E3A7B /* Functionalitytest.swift in Sources */,
 				7EEC4740294549A1000E3A7B /* MockURLProtocol.swift in Sources */,
 				7EEC47462946205F000E3A7B /* AlamoFireRequestTest.swift in Sources */,
 				7EC5D2502943B0540079F1FF /* PhotoResponseTest.swift in Sources */,
@@ -538,11 +636,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KiliaroTest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KiliaroTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,11 +667,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KiliaroTest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KiliaroTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

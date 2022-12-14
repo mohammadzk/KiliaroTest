@@ -48,7 +48,9 @@ class RequestBuilder:URLRequestConvertible {
             fatalError("has no url")
         }
         for str in parameters {
-            url.append(component:str )
+           
+            url.appendPathComponent(str, conformingTo: .url)
+            
             
         }
         return RequestBuilder(request: URLRequest(url:url))
@@ -75,6 +77,12 @@ class RequestBuilder:URLRequestConvertible {
     }
     func asURLRequest() throws -> URLRequest {
         return self.request
+    }
+    
+    func Url()->URL? {
+        
+        return self.request.url
+        
     }
 }
 

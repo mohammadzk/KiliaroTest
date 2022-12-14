@@ -8,6 +8,20 @@
 import Foundation
 import Alamofire
 
+let sessionManager:Alamofire.Session = { 
+    
+    let configration = URLSessionConfiguration.af.default
+    
+    configration.timeoutIntervalForRequest = 15.0
+    
+    configration.timeoutIntervalForResource = 15.0
+    
+    
+    return Session(configuration: configration)
+    
+    
+}()
+
 protocol Service {
     
     associatedtype ResultType : Codable
@@ -16,6 +30,7 @@ protocol Service {
     
     var request:RequestBuilder {get}
     
+    var path:String {set get}
   
     
     func run (_ completionHandler:@escaping (Result<ResultType>) -> Void)
@@ -37,6 +52,7 @@ extension Service {
                     completionHandler(.failure(.responseSerializationFailed(reason: .inputDataNilOrZeroLength)))
                     return
                 }
+              
                 do {
                     
                     let parsedObject = try JSONDecoder().decode(ResultType.self, from: responseData)

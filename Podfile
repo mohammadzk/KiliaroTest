@@ -6,6 +6,7 @@ target 'KiliaroTest' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SDWebImageSwiftUI'
 
   target 'KiliaroTestTests' do
     inherit! :search_paths

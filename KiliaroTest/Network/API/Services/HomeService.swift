@@ -12,25 +12,15 @@ struct HomeService:Service {
     
     typealias ResultType = [PhotoModel]
     
-    var session: Alamofire.Session = {
-        
-        let configration = URLSessionConfiguration.af.default
-        
-        configration.timeoutIntervalForRequest = 15.0
-        
-        configration.requestCachePolicy = .returnCacheDataElseLoad
-        
-        return Session(configuration: configration)
-        
-    }()
+    var session: Alamofire.Session = sessionManager
     
     var baseUrl:String
     
-    var pathItems:[String]
+    var path:String
     
     var request: RequestBuilder{
-        
-        return RequestBuilder(self.baseUrl).addPathItems(parameters: pathItems)
+      
+        return RequestBuilder(self.baseUrl,path: path)
         
     }
     
