@@ -20,28 +20,42 @@ struct HomeView: View {
     }
     
     var body: some View {
-        
-        GeometryReader { reader in
-            
-            ScrollView(.vertical,showsIndicators: false){
+        NavigationView {
+            GeometryReader { reader in
                 
-                getView
-                
-             }
-            .onAppear{
-                
-                model.status = .loading
-                
-                let fixedwidth  =  (reader.frame(in: .global).width  / CGFloat(model.itemsPerRow)) - CGFloat((model.itemsPerRow + 1) * 4 )
-                
-                self.model.itemWidth = fixedwidth
-                
-                self.model.itemHeight = fixedwidth
+                ScrollView(.vertical,showsIndicators: false){
+                    
+                    getView
+                    
+                }
+                .onAppear{
+                    
+                    model.status = .loading
+                    
+                    let fixedwidth  =  (reader.frame(in: .global).width  / CGFloat(model.itemsPerRow)) - CGFloat((model.itemsPerRow + 1) * 4 )
+                    
+                    self.model.itemWidth = fixedwidth
+                    
+                    self.model.itemHeight = fixedwidth
+                    
+                }
                 
             }
-            
+            .frame(maxWidth:.infinity)
+            .navigationTitle(Text("Kiliaro"))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button(action: {
+                
+                model.refresh()
+                
+            }, label: {
+                Image(systemName:"arrow.triangle.2.circlepath")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width:40,height:30)
+            }))
         }
-        .frame(maxWidth:.infinity)
+        .navigationViewStyle(StackNavigationViewStyle())
         .fullScreenCover(item: $selectedItem, onDismiss: {
             selectedItem = nil
         }, content: { item in
@@ -51,7 +65,7 @@ struct HomeView: View {
     }
     
     var getView:some View {
-        VStack {
+        VStack(alignment:.center) {
             switch model.status {
             case .idle,.firstBatchLoaded:
                 
@@ -73,13 +87,33 @@ struct HomeView: View {
                 .padding()
                 
             case .loading:
-                Text("Loading ..")
+                
+                
+                
+                ActivityIndicator(style: .medium, color: .gray, isAnimating: .constant(true))
+                    .position(x:UIScreen.main.bounds.midX,y: UIScreen.main.bounds.midY)
+                
+                
                 
             case .failure(error:let  message):
                 
-                Text(message)
+                Spacer()
+                
+                VStack {
+                    
+                    Image(systemName: "xmark.octagon")
+                        .resizable()
+                        .frame(width: 32,height: 32)
+                    
+                    Text(message)
+                        .font(.body)
+                }
+                
+                Spacer()
+              
             }
         }
+      
     }
     
     private var columns: [GridItem]{

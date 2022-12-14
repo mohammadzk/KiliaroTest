@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-let sessionManager:Alamofire.Session = { 
+let sessionManager:Alamofire.Session = {
     
     let configration = URLSessionConfiguration.af.default
     

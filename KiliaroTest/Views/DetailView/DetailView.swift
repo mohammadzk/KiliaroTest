@@ -14,34 +14,51 @@ struct DetailView: View {
     
     @Environment (\.presentationMode) private var prensentationValue
     
-    @Environment (\.colorScheme) private var coloScheme
+    
     
     init(imageOriginalUrl:URL?,creatDate:String) {
         
         self.model = DetailViewModel(imgUrl: imageOriginalUrl, creatDate: creatDate)
     }
     
+    @State private var hidenavigationbar:Bool = false
     
     
     var body: some View {
         
-        NavigationView {
+        VStack {
+            WebImage(url: model.imageUrl)
+                .placeholder(content: {
+                    ActivityIndicator(style: .large, color: .gray, isAnimating: .constant(true))
+                })
+                .resizable()
+                .aspectRatio( contentMode: .fit)
+                .ignoresSafeArea(.container, edges: .all)
+                .onTapGesture {
+                    withAnimation(.easeInOut){
+                        self.hidenavigationbar.toggle()
+                    }
+                }
+
+        }
+        .frame(maxWidth:.infinity,maxHeight:.infinity)
+        .background(Color.black.ignoresSafeArea())
+        .overlay(headerView.opacity(hidenavigationbar ? 0 : 1),alignment: .top)
+
+    }
+    
+    var headerView:some View {
+        
+        HStack{
             
-            VStack {
-                
-                WebImage(url: model.imageUrl)
-                    .resizable()
-                    .aspectRatio( contentMode: .fill)
-                    .ignoresSafeArea(.container, edges: .bottom)
-                
-            }
-            .background(Color.black)
-            .navigationBarTitle("")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: Text(model.creatDate)
-                .foregroundColor(coloScheme == .light ? .black : .white)
-                .font(.headline)
-                                , trailing: Button(action: {
+            Text(model.creatDate)
+                .font(.subheadline)
+                .foregroundColor(.white)
+                .padding(.leading,16)
+            
+            Spacer()
+            
+            Button(action: {
                 
                 prensentationValue.wrappedValue.dismiss()
                 
@@ -49,16 +66,17 @@ struct DetailView: View {
                 Image(systemName: "chevron.down")
                     .resizable()
                     .renderingMode(.template)
-                    .accentColor(.gray)
+                    .accentColor(.white)
                     .frame(width:32,height: 16,alignment: .center)
-                    
-                
-            }))
+            })
+            .padding(.trailing,16)
             
-            
+     
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .frame(height:64)
+        .background(Color.blue.blur(radius: 4).opacity(0.4).blendMode(BlendMode.colorBurn))
     }
+    
 }
 
 

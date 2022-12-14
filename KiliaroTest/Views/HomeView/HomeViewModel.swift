@@ -20,27 +20,71 @@ class HomeViewModel:ObservableObject {
     
     @Published var itemHeight:CGFloat = CGFloat.zero
     
+    private var cache:CacheHandler<[PhotoModel]>
+    
     private var cancleables:Set<AnyCancellable> = Set<AnyCancellable>()
     
     init(itemsperRow:Int = 3) {
         
         self.itemsPerRow = itemsperRow
         
+        self.cache = CacheHandler<[PhotoModel]>()
+        
         $status
             .first(where: {$0 == .loading})
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.loadPhotos()
+                self?.load()
             }
             .store(in: &cancleables)
     }
     
+    func refresh(){
+        
+        self.items = []
+        
+        self.status = .loading
+        
+        do{
+            try cache.delete(with: "home")
+        }
+        catch let error {
+            
+            debugPrint(error.localizedDescription)
+            
+        }
+        self.loadPhotos()
+    }
+    
+    func load(){
+        guard cache.cacheDataExists(with: "home") else {
+            self.loadPhotos()
+            return
+        }
+        do {
+          let photos =  try cache.retrive(with: "home")
+            
+            self.items = photos.compactMap({ photo in
+                
+                return  try?   ItemModel(itemId: photo.fileId, imageUrlstr: photo.thumbnailUrlStr, dateStr:photo.createdAt?.projectDateString() , size: photo.size.toMegabytes())
+            })
+            status = .firstBatchLoaded
+        }
+        catch let error {
+            debugPrint(error.localizedDescription)
+            self.loadPhotos()
+        }
+    }
     
     func loadPhotos(){
         
         let service = HomeService(baseUrl: APIConstants.baseURL, path: APIConstants.sharedEndPoint(with: APIConstants.costantSharedKey))
         
-        service.run { result in
+        service.run { [weak self] result in
+            
+            guard let strongSelf = self else {
+                return
+            }
             
             switch result {
                 
@@ -48,16 +92,25 @@ class HomeViewModel:ObservableObject {
                 
                 
                 
-                self.items = photos.compactMap({ photo in
+                strongSelf.items = photos.compactMap({ photo in
                     
                     return  try?   ItemModel(itemId: photo.fileId, imageUrlstr: photo.thumbnailUrlStr, dateStr:photo.createdAt?.projectDateString() , size: photo.size.toMegabytes())
                 })
                 
-                self.status = .firstBatchLoaded
                 
+                strongSelf.status = .firstBatchLoaded
+                
+                do {
+                    try strongSelf.cache.save(object: photos, with: "home")
+                }
+                catch let error{
+                    
+                    debugPrint(error.localizedDescription)
+                    
+                }
             case .failure(let error):
-                
-                self.status = .failure(error: error.errorDescription!)
+                 
+                strongSelf.status = .failure(error:  error.errorDescription ?? "oh,Something went wrong,Please be patient, we are  working on it " )
                 
             }
         }
