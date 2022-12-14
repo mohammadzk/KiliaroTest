@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    
-    
-    
+
     @ObservedObject var model:HomeViewModel
+    
+    @State private var selectedItem:HomeViewModel.ItemModel? = nil
     
     init(model: HomeViewModel = HomeViewModel()) {
         
@@ -21,25 +20,34 @@ struct HomeView: View {
     }
     
     var body: some View {
+        
         GeometryReader { reader in
+            
             ScrollView(.vertical,showsIndicators: false){
                 
                 getView
                 
-            }
+             }
             .onAppear{
                 
                 model.status = .loading
-                self.model.itemWidth = (reader.frame(in: .global).width  / CGFloat(model.itemsPerRow)) - CGFloat((model.itemsPerRow + 1) * 4 )
                 
-                self.model.itemHeight = (reader.frame(in: .global).width / CGFloat(model.itemsPerRow)) - CGFloat((model.itemsPerRow + 1) * 4 )
+                let fixedwidth  =  (reader.frame(in: .global).width  / CGFloat(model.itemsPerRow)) - CGFloat((model.itemsPerRow + 1) * 4 )
+                
+                self.model.itemWidth = fixedwidth
+                
+                self.model.itemHeight = fixedwidth
                 
             }
             
         }
         .frame(maxWidth:.infinity)
-        
-        
+        .fullScreenCover(item: $selectedItem, onDismiss: {
+            selectedItem = nil
+        }, content: { item in
+            DetailView(imageOriginalUrl: item.imageUrl, creatDate: item.creatDate)
+        })
+    
     }
     
     var getView:some View {
@@ -54,6 +62,11 @@ struct HomeView: View {
                         
                         PhotoCell(imageUrl: model.idealSizeImageUrl( imgUrl: item.imageUrl), fileSize: item.size)
                             .frame(width: model.itemWidth,height: model.itemHeight)
+                            .onTapGesture {
+                                
+                                self.selectedItem = item
+        
+                            }
                         
                     }
                 }

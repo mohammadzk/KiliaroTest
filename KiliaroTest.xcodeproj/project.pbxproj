@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51610FDBE420E0F3D4C6AED7 /* Pods_KiliaroTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94F14CF4A402261D7D74350 /* Pods_KiliaroTest.framework */; };
+		7E888BAF294A2A7F0015FF71 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E888BAE294A2A7F0015FF71 /* DetailView.swift */; };
+		7E888BB1294A2B010015FF71 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E888BB0294A2B010015FF71 /* DetailViewModel.swift */; };
 		7EC5D232294371ED0079F1FF /* KiliaroTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */; };
 		7EC5D236294371F10079F1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D235294371F10079F1FF /* Assets.xcassets */; };
 		7EC5D239294371F10079F1FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D238294371F10079F1FF /* Preview Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		15C048EB9075BFF1D5D4ABEC /* Pods-KiliaroTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiliaroTestTests.debug.xcconfig"; path = "Target Support Files/Pods-KiliaroTestTests/Pods-KiliaroTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7053C8CC1D908A7AB043853C /* Pods_KiliaroTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiliaroTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E888BAC2949B80F0015FF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7E888BAE294A2A7F0015FF71 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7E888BB0294A2B010015FF71 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		7EC5D22E294371ED0079F1FF /* KiliaroTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiliaroTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC5D231294371ED0079F1FF /* KiliaroTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroTestApp.swift; sourceTree = "<group>"; };
 		7EC5D235294371F10079F1FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +116,15 @@
 				7053C8CC1D908A7AB043853C /* Pods_KiliaroTestTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E888BAD294A2A680015FF71 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				7E888BAE294A2A7F0015FF71 /* DetailView.swift */,
+				7E888BB0294A2B010015FF71 /* DetailViewModel.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		7EC5D225294371ED0079F1FF = {
@@ -222,6 +235,7 @@
 		7EEC474F2947A260000E3A7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7E888BAD294A2A680015FF71 /* DetailView */,
 				7EEC47672948E1C0000E3A7B /* CellItemViews */,
 				7EEC47552947CDAD000E3A7B /* HomeView */,
 			);
@@ -468,11 +482,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EEC476C2948E238000E3A7B /* PhotoCellViewModel.swift in Sources */,
+				7E888BAF294A2A7F0015FF71 /* DetailView.swift in Sources */,
 				7EC5D241294378630079F1FF /* PhotoModel.swift in Sources */,
 				7EEC47542947C96E000E3A7B /* MainWindowEnvironmentKey.swift in Sources */,
 				7EEC47592947D6B9000E3A7B /* Formatters.swift in Sources */,
 				7EEC47642948C9A8000E3A7B /* APIConstans.swift in Sources */,
 				7EEC47692948E1E2000E3A7B /* PhotoCell.swift in Sources */,
+				7E888BB1294A2B010015FF71 /* DetailViewModel.swift in Sources */,
 				7EEC473829453661000E3A7B /* ObjectValidator.swift in Sources */,
 				7EEC47572947CDCE000E3A7B /* HomeViewModel.swift in Sources */,
 				7EC5D232294371ED0079F1FF /* KiliaroTestApp.swift in Sources */,
