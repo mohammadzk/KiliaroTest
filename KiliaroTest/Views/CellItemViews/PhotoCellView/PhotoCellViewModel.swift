@@ -7,7 +7,7 @@
 
 import Foundation
 
- class PhotoCellViewModel:ObservableObject {
+final  class PhotoCellViewModel:ObservableObject {
     
      
         @Published var imageUrl:URL?

@@ -7,8 +7,9 @@
 
 import Foundation
 import Combine
+import SDWebImage
 
-class HomeViewModel:ObservableObject {
+final class HomeViewModel:ObservableObject {
     
     @Published var items:[ItemModel] = []
     
@@ -20,7 +21,19 @@ class HomeViewModel:ObservableObject {
     
     @Published var itemHeight:CGFloat = CGFloat.zero
     
+    
+    
     private var cache:CacheHandler<[PhotoModel]>
+    
+    private var cacheKey = "home"
+    
+    
+    
+    private   func clearImageCache(){
+        
+        SDImageCache.shared.clear(with: .all)
+        
+    }
     
     private var cancleables:Set<AnyCancellable> = Set<AnyCancellable>()
     
@@ -39,6 +52,8 @@ class HomeViewModel:ObservableObject {
             .store(in: &cancleables)
     }
     
+  
+    
     func refresh(){
         
         self.items = []
@@ -47,6 +62,7 @@ class HomeViewModel:ObservableObject {
         
         do{
             try cache.delete(with: "home")
+            clearImageCache()
         }
         catch let error {
             
@@ -57,12 +73,12 @@ class HomeViewModel:ObservableObject {
     }
     
     func load(){
-        guard cache.cacheDataExists(with: "home") else {
+        guard cache.cacheDataExists(with: self.cacheKey) else {
             self.loadPhotos()
             return
         }
         do {
-          let photos =  try cache.retrive(with: "home")
+            let photos =  try cache.retrive(with: self.cacheKey)
             
             self.items = photos.compactMap({ photo in
                 
@@ -101,7 +117,7 @@ class HomeViewModel:ObservableObject {
                 strongSelf.status = .firstBatchLoaded
                 
                 do {
-                    try strongSelf.cache.save(object: photos, with: "home")
+                    try strongSelf.cache.save(object: photos, with: strongSelf.cacheKey)
                 }
                 catch let error{
                     
@@ -109,9 +125,18 @@ class HomeViewModel:ObservableObject {
                     
                 }
             case .failure(let error):
-                 
-                strongSelf.status = .failure(error:  error.errorDescription ?? "oh,Something went wrong,Please be patient, we are  working on it " )
                 
+                switch error {
+                    
+                case .responseSerializationFailed(_):
+                    strongSelf.status = .failure(error:   "oh,Wrong data retrived ,Please be patient, we are working on it " )
+                default:
+                    strongSelf.status = .failure(error:   "oh,Something went wrong,Problem accessing data, Please check your Internet connection. " )
+                    
+                }
+                
+                debugPrint(error.errorDescription ?? "")
+              
             }
         }
         
@@ -132,9 +157,12 @@ class HomeViewModel:ObservableObject {
        return RequestBuilder(request: URLRequest.init(url: imageUrl))
                                                    .addQuery(parameters: ["w":widthStr , "h":heightStr ,"m":"crop"])
                                                    .Url()
-       
- 
+  
     }
+
+}
+
+extension HomeViewModel {
     
     struct  ItemModel:Identifiable {
         

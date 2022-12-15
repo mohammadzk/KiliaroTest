@@ -90,7 +90,7 @@ struct HomeView: View {
                 
                 
                 
-                ActivityIndicator(style: .medium, color: .gray, isAnimating: .constant(true))
+                ActivityIndicator(style: .large, color: .darkGray, isAnimating: .constant(true))
                     .position(x:UIScreen.main.bounds.midX,y: UIScreen.main.bounds.midY)
                 
                 
@@ -100,13 +100,14 @@ struct HomeView: View {
                 Spacer()
                 
                 VStack {
-                    
+                    Spacer()
                     Image(systemName: "xmark.octagon")
                         .resizable()
                         .frame(width: 32,height: 32)
                     
                     Text(message)
                         .font(.body)
+                        .padding()
                 }
                 
                 Spacer()

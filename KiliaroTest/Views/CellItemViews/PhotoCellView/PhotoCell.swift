@@ -24,8 +24,11 @@ struct PhotoCell:View {
             WebImage(url: model.imageUrl)
                 .resizable()
                 .placeholder {
+                    
                     RoundedRectangle(cornerRadius: 6)
                         .fill(Color.gray)
+                        .overlay(ActivityIndicator(style: .medium, color: .darkGray, isAnimating: .constant(true)))
+                 
                 }
                 .aspectRatio( contentMode: .fill)
                 .overlay (
