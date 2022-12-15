@@ -7,6 +7,7 @@
 
 import Foundation
 
+//object error for  throwing error in try catch statements
 enum Objectvalidator:Error {
     case invalid(String)
 }

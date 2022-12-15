@@ -7,6 +7,7 @@
 
 import Foundation
 
+//model for data retrived from api
 struct PhotoModel:Codable {
     
     let fileId:String

@@ -8,7 +8,11 @@
 import Foundation
 import Alamofire
 
+//service result
+
 enum Result<T> where T:Codable {
+    
     case succes(T)
+    
     case failure(AFError)
 }

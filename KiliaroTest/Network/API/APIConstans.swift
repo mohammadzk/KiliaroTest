@@ -12,9 +12,6 @@ struct APIConstants{
     static var baseURL = "https://api1.kiliaro.com"
     
     
-   
-    
-    
     static var costantSharedKey = "djlCbGusTJamg_ca4axEVw"
     
      

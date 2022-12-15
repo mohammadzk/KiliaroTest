@@ -11,6 +11,9 @@ import SDWebImage
 
 final class HomeViewModel:ObservableObject {
     
+    
+    //MARK: variables
+    
     @Published var items:[ItemModel] = []
     
     @Published var status:LoadStatus = .idle
@@ -51,9 +54,10 @@ final class HomeViewModel:ObservableObject {
             }
             .store(in: &cancleables)
     }
-    
   
-    
+    //MARK: Api Requests
+  
+    ///refreshes the cache and loads new data
     func refresh(){
         
         self.items = []
@@ -72,7 +76,9 @@ final class HomeViewModel:ObservableObject {
         self.loadPhotos()
     }
     
+    ///checks if the data had been Cached if not loads the data from Api
     func load(){
+        
         guard cache.cacheDataExists(with: self.cacheKey) else {
             self.loadPhotos()
             return
@@ -91,7 +97,7 @@ final class HomeViewModel:ObservableObject {
             self.loadPhotos()
         }
     }
-    
+    ///loads the home service api
     func loadPhotos(){
         
         let service = HomeService(baseUrl: APIConstants.baseURL, path: APIConstants.sharedEndPoint(with: APIConstants.costantSharedKey))
@@ -140,8 +146,9 @@ final class HomeViewModel:ObservableObject {
             }
         }
         
+        
     }
-    
+    ///retrives url for thumbnail images with crop fuction and item width and height
     func idealSizeImageUrl(imgUrl:URL?)->URL?{
         
         let formater = NumberFormatter()
@@ -164,6 +171,7 @@ final class HomeViewModel:ObservableObject {
 
 extension HomeViewModel {
     
+    /// Wrapper around photomodel to specify home data
     struct  ItemModel:Identifiable {
         
         var id:String

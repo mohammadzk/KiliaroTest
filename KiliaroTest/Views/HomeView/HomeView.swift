@@ -31,7 +31,7 @@ struct HomeView: View {
                 .onAppear{
                     
                     model.status = .loading
-                    
+                    //getting the item width due to screnn width
                     let fixedwidth  =  (reader.frame(in: .global).width  / CGFloat(model.itemsPerRow)) - CGFloat((model.itemsPerRow + 1) * 4 )
                     
                     self.model.itemWidth = fixedwidth
@@ -63,14 +63,14 @@ struct HomeView: View {
         })
     
     }
-    
+    //MARK: specefic views and function
     var getView:some View {
         VStack(alignment:.center) {
             switch model.status {
             case .idle,.firstBatchLoaded:
                 
                 
-                LazyVGrid(columns: self.columns) {
+                LazyVGrid(columns: self.columns,spacing: 16) {
                     
                     ForEach(model.items) { item in
                         
@@ -116,7 +116,7 @@ struct HomeView: View {
         }
       
     }
-    
+    /// colums for grid with items per row
     private var columns: [GridItem]{
         
         var colums = [GridItem]()

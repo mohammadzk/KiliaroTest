@@ -8,8 +8,10 @@
 import Foundation
 import Alamofire
 
+/// unique sessionmanager that creat single session for all services with same host
+
 let sessionManager:Alamofire.Session = {
-    
+    /// alamofire urlconfigartion
     let configration = URLSessionConfiguration.af.default
     
     configration.timeoutIntervalForRequest = 15.0
@@ -22,13 +24,16 @@ let sessionManager:Alamofire.Session = {
     
 }()
 
+///protocol 'Service' for each service that should be created
 protocol Service {
     
     associatedtype ResultType : Codable
     
+    //specefic session for each service
     var  session:Alamofire.Session {set get}
     
     var request:RequestBuilder {get}
+    
     
     var path:String {set get}
   
@@ -36,6 +41,7 @@ protocol Service {
     func run (_ completionHandler:@escaping (Result<ResultType>) -> Void)
 }
 
+//an extension for handling run function
 extension Service {
     
     
