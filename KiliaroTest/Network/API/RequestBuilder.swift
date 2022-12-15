@@ -42,20 +42,7 @@ class RequestBuilder:URLRequestConvertible {
         
         return RequestBuilder(request: rq)
     }
-    func addPathItems(parameters:[String])-> RequestBuilder {
-        
-        guard   var url = self.request.url else {
-            fatalError("has no url")
-        }
-        for str in parameters {
-           
-            url.appendPathComponent(str, conformingTo: .url)
-            
-            
-        }
-        return RequestBuilder(request: URLRequest(url:url))
-        
-    }
+
     func addQuery( parameters:Parameters)->RequestBuilder {
         
         let rq = self.request
@@ -75,6 +62,7 @@ class RequestBuilder:URLRequestConvertible {
         return RequestBuilder(request: req)
         
     }
+    
     func asURLRequest() throws -> URLRequest {
         return self.request
     }
